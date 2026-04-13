@@ -3,5 +3,84 @@ kind: Gateway
 metadata:
   name: gateway
 spec:
-  devices: {}
+  devices:
+    gateway:
+      autoManaged: true
+      protocol: gateway
+    mqtt:
+      autoManaged: true
+      protocol: mqtt
+    network:
+      autoManaged: true
+      protocol: network
+  udtTemplates:
+    NetworkInterface:
+      name: NetworkInterface
+      members:
+        - name: operstate
+          datatype: string
+        - name: carrier
+          datatype: boolean
+        - name: speed
+          datatype: number
+        - name: mtu
+          datatype: number
+        - name: mac
+          datatype: string
+        - name: rxBytes
+          datatype: number
+        - name: txBytes
+          datatype: number
+        - name: rxPackets
+          datatype: number
+        - name: txPackets
+          datatype: number
+        - name: rxErrors
+          datatype: number
+        - name: txErrors
+          datatype: number
+        - name: rxDropped
+          datatype: number
+        - name: txDropped
+          datatype: number
+      version: "1.0"
+  udtVariables:
+    eth0:
+      deviceId: network
+      id: eth0
+      memberTags:
+        carrier: eth0_carrier
+        mac: eth0_mac
+        mtu: eth0_mtu
+        operstate: eth0_operstate
+        rxBytes: eth0_rxBytes
+        rxDropped: eth0_rxDropped
+        rxErrors: eth0_rxErrors
+        rxPackets: eth0_rxPackets
+        speed: eth0_speed
+        txBytes: eth0_txBytes
+        txDropped: eth0_txDropped
+        txErrors: eth0_txErrors
+        txPackets: eth0_txPackets
+      tag: eth0
+      templateName: NetworkInterface
+    lo:
+      deviceId: network
+      id: lo
+      memberTags:
+        carrier: lo_carrier
+        mac: lo_mac
+        mtu: lo_mtu
+        operstate: lo_operstate
+        rxBytes: lo_rxBytes
+        rxDropped: lo_rxDropped
+        rxErrors: lo_rxErrors
+        rxPackets: lo_rxPackets
+        speed: lo_speed
+        txBytes: lo_txBytes
+        txDropped: lo_txDropped
+        txErrors: lo_txErrors
+        txPackets: lo_txPackets
+      tag: lo
+      templateName: NetworkInterface
   variables: {}
