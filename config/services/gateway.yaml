@@ -1,0 +1,7 @@
+apiVersion: tentacle.joyautomation.com/v1
+kind: Service
+metadata:
+  name: gateway
+spec:
+  running: true
+  version: latest

@@ -1,0 +1,7 @@
+apiVersion: tentacle.joyautomation.com/v1
+kind: Gateway
+metadata:
+  name: gateway
+spec:
+  devices: {}
+  variables: {}

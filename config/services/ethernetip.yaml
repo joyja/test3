@@ -1,0 +1,7 @@
+apiVersion: tentacle.joyautomation.com/v1
+kind: Service
+metadata:
+  name: ethernetip
+spec:
+  running: true
+  version: latest

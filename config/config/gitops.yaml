@@ -1,0 +1,12 @@
+apiVersion: tentacle.joyautomation.com/v1
+kind: ModuleConfig
+metadata:
+  name: gitops
+spec:
+  values:
+    GITOPS_AUTO_PULL: "true"
+    GITOPS_AUTO_PUSH: "true"
+    GITOPS_BRANCH: main
+    GITOPS_PATH: config
+    GITOPS_POLL_INTERVAL_S: "60"
+    GITOPS_REPO_URL: git@github.com:joyja/test3.git

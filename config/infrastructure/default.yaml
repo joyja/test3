@@ -1,0 +1,8 @@
+apiVersion: tentacle.joyautomation.com/v1
+kind: Network
+metadata:
+  name: default
+spec:
+  interfaces:
+    - dhcp4: true
+      interfaceName: eth0

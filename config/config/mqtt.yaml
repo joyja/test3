@@ -1,0 +1,23 @@
+apiVersion: tentacle.joyautomation.com/v1
+kind: ModuleConfig
+metadata:
+  name: mqtt
+spec:
+  values:
+    MQTT_BROKER_URL: tcp://10.154.92.197:1883
+    MQTT_CLIENT_ID: tentacle-mqtt
+    MQTT_EDGE_NODE: EdgeNode1
+    MQTT_GROUP_ID: TentacleGroup
+    MQTT_KEEPALIVE: "30"
+    MQTT_PASSWORD: ""
+    MQTT_PER_SOURCE_DEVICE: "false"
+    MQTT_PRIMARY_HOST_ID: ""
+    MQTT_SF_DRAIN_RATE: "100"
+    MQTT_SF_MAX_MB: "50"
+    MQTT_SF_MAX_RECORDS: "10000"
+    MQTT_TLS_CA_PATH: ""
+    MQTT_TLS_CERT_PATH: ""
+    MQTT_TLS_ENABLED: "false"
+    MQTT_TLS_KEY_PATH: ""
+    MQTT_USERNAME: ""
+    MQTT_USE_TEMPLATES: "true"
